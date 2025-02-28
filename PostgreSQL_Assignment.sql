@@ -57,6 +57,10 @@ INSERT INTO students (student_name, age, email, frontend_mark, backend_mark, sta
 VALUES ('Mahmudul Haque Noor', 24, 'mahmudulhaquenoor@gmail.com', 85, 90, NULL);
 
 
+-- Query 2: Retrieving the names of all students who are enrolled in the course titled 'Next.js'.
+SELECT student_name FROM students JOIN enrollment ON students.student_id = enrollment.student_id WHERE course_id = 1;
+
+
 
 
 
