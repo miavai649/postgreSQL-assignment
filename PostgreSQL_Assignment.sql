@@ -45,6 +45,14 @@ INSERT INTO courses (course_name, credits) VALUES
 ('Databases', 3),
 ('Prisma', 3)
 
+-- insert the following data into the enrollment table
+INSERT INTO enrollment (student_id, course_id) VALUES
+(1, 1),
+(1, 2),
+(2, 1),
+(3, 2)
+
 
 SELECT * FROM students;
 SELECT * FROM courses;
+SELECT * FROM enrollment;
