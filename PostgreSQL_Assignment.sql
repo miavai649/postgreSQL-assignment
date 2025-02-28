@@ -9,3 +9,12 @@ CREATE TABLE students (
     status VARCHAR(10) 
 );
 
+-- create a table named courses with the following columns
+-- course_id, course_name, credits
+CREATE TABLE courses (
+    course_id SERIAL PRIMARY KEY,
+    course_name VARCHAR(50) NOT NULL,
+    credits INT NOT NULL
+)
+
+
