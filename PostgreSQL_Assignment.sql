@@ -38,4 +38,13 @@ INSERT INTO students (student_name, age, email, frontend_mark, backend_mark) VAL
 ('Sophia', 22, 'sophia@example.com', 50, 52),
 ('Hasan', 23, 'hasan@gmail.com', 43, 39)
 
+-- insert the following data into the courses table
+INSERT INTO courses (course_name, credits) VALUES
+('Next.js', 3),
+('React.js', 4),
+('Databases', 3),
+('Prisma', 3)
+
+
 SELECT * FROM students;
+SELECT * FROM courses;
