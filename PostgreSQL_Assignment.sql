@@ -61,7 +61,12 @@ VALUES ('Mahmudul Haque Noor', 24, 'mahmudulhaquenoor@gmail.com', 85, 90, NULL);
 SELECT student_name FROM students JOIN enrollment ON students.student_id = enrollment.student_id WHERE course_id = 1;
 
 
-
+-- Query 3: Updating the status of the student with the highest total (frontend_mark + backend_mark) to 'Awarded'.
+UPDATE students 
+SET status = 'Awarded' 
+WHERE frontend_mark + backend_mark = (
+    SELECT  MAX(frontend_mark + backend_mark) FROM students
+);
 
 
 SELECT * FROM students;
