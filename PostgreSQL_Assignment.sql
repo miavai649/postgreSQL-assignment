@@ -17,4 +17,13 @@ CREATE TABLE courses (
     credits INT NOT NULL
 )
 
+-- create a table named enrollment with the following columns
+-- enrollment_id, student_id, course_id
+CREATE TABLE enrollment (
+    enrollment_id SERIAL PRIMARY KEY,
+    student_id INT NOT NULL,
+    course_id INT NOT NULL,
+    FOREIGN KEY (student_id) REFERENCES students(student_id),
+    FOREIGN KEY (course_id) REFERENCES courses(course_id)
+)
 
