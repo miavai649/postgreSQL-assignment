@@ -74,6 +74,9 @@ DELETE FROM courses WHERE course_id NOT IN (SELECT c.course_id FROM courses c  J
 -- Query 5: Retrieving the names of students using a limit of 2, starting from the 3rd student.
 SELECT student_name FROM students OFFSET 2 LIMIT 2;
 
+-- Query 6: Retrieving the course names and the number of students enrolled in each course.
+SELECT course_name,count(*) AS students_enrolled FROM courses c JOIN enrollment e ON c.course_id = e.course_id GROUP BY course_name;
+
 SELECT * FROM students;
 SELECT * FROM courses;
 SELECT * FROM enrollment;
