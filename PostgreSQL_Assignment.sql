@@ -71,7 +71,8 @@ WHERE frontend_mark + backend_mark = (
 -- Query 4: Deleting all courses that have no students enrolled.
 DELETE FROM courses WHERE course_id NOT IN (SELECT c.course_id FROM courses c  JOIN enrollment e ON c.course_id = e.course_id);
 
-
+-- Query 5: Retrieving the names of students using a limit of 2, starting from the 3rd student.
+SELECT student_name FROM students OFFSET 2 LIMIT 2;
 
 SELECT * FROM students;
 SELECT * FROM courses;
